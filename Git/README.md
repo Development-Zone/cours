@@ -1,6 +1,6 @@
 # Git
 
-Git est un système de versionning, qui permet de garder une trace de tous les modifications et versions d'un code. 
+Git est un système de versionning, qui permet de garder une trace de toutes les modifications et versions d'un code. 
 Ces modifications sont appelées **commit**. 
 
 Il existe plusieurs autres systèmes de versionning comme GitHub, SVN (Subversion), Bitbucket, Perforce, ou Mercurial. 
