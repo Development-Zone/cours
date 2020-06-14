@@ -24,7 +24,7 @@ Il facilite la vie des développeurs car il facilite le travail en équipe et le
 
 **SHA** : Code unique d'un commit, il permet d'être sûr qu'il n'a pas été modifié. Un nouveau SHA est généré à chaque commit. Il ne peut pas y avoir deux SHA identiques. 
 
-**Dépôt distant** : Souvent appelé _repo_ ou _repository_, un dépôt est un endroit de stockage de votre code, en l'occurence **Git**. GitHub est aussi un dépôt distant et une interface graphique très utilisée.
+**Dépôt distant** : Souvent appelé _repo_ ou _repository_, un dépôt est un endroit de stockage de votre code, en l'occurence **Git**. GitHub est aussi un dépôt distant et une interface graphique très utilisés.
 
 **Merge** : Action de fusionner 2 branches, les modifications de la branche éditée seront fusionnées à la branche voulue, souvent la branche principale.
 
