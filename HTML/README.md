@@ -62,7 +62,7 @@ Les balises de type block sont comme des boites qu'ont peut modifier: Largeur, H
 - section: balise sémantique qui représente une section de la page. 
 - footer: balise sémantique qui répresente le pied de page.
 
-### Les balise de type inline
+### Les balises de type inline
 
 Les balise de type inline sont des balise qui vont mettre en valeur le text comme en **gras**, _italique_, __barré__ ou <u>souligné</u>. 
 
@@ -71,11 +71,11 @@ Les balise de type inline sont des balise qui vont mettre en valeur le text comm
 - em : mettre le texte en italique
 - mark : surligner le texte, par défaut, il sera surligné en jaune, libre a vous de changer ceci dans le CSS.
 
-## Mémento balise HTML
+## Mémento balises HTML
 
 Vous pouvez trouver le mémento de openclassroom des balises HTML [ici](https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1608357-memento-des-balises-html)
 
-## Ressource utilise
+## Ressources utilisées
 
 Pour apprendre le HTML, vous pouvez suivre cet excellent cours de Mathieu Nebra, Cofondateur de Openclassroom.
 
