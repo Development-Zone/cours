@@ -44,6 +44,22 @@ tous les commande sont a rentrer dans la CLI ( Command line interface , ce qui c
 
 **git branch _name_** : permet de crée une nouvelle branche, dans mon exemple avec le voyage dans le temps c'est comme si on crée une nouvelle dimension parallèle. _name_ est a remplacer par le nom de la branche qu'on veut. 
 
+**git merge _branch1_ _[branch2]_** : permet de fusioner les commit de la branch1 dans la branch2, si la branch2 n'est pas renseigné, c'est la branche actuel qui sera pris en tant que branche 2. ( le parametre _branch2_ est facultatif ). si au niveau des 2 branche, il a eu des modification au meme endroit, lors de la merge, cela causera des conflits. git vous propsera quel version choisir et vous demandera de résoudre les conflits manuellement avant le merge. 
+
+###  pour obtenir des information 
+
+**git status** : donne des information sur l'état du repo , elle donne l'état de l'index, le nombre de la branche actuel ou du commit ( SHA ) actuel et d'autre information. ( c'est une commande que j'utilise souvent ) 
+
+**git log** : affiche la liste des commit de la branche actuel 
+
+**git show _[SHA]_** : affiche le détail de commit, le numéro de SHA est facultatif, si il n'est pas renséigné, c'est le dernier commit qui sera pris.
+
+**git diqff _[SHA1]_ _[SHA2]_** : cette commande affiche les différence de code entre 2 commits, si rien n'est renséigné dans les SHA, il donnera la différence entre l'état du travail actuel et du dernier commit. si il y a que le SHA1 de renseigner, on aura la différence de l'état de travail avec le commit renseingé SHA1. 
+
+**git blame _file_** : affiche le code d'un fichier en indiquant qui a éditer les lignes, cette commande est utilise si on veut retrouver le coupable d'un bug et de le blamer. ( cette commande est utile que si on travaill à plusieurs)
+
+
+
 ### pour travailer en équipe : 
 
 **git push _remote_ _branch_** : action qui permet d'envoyer le code d'une branche sur une repo. (en général github, framagit, gitlab ). **remote** est l'adresse du depot ou son alias ( souvent elle s'appele **origin**)
