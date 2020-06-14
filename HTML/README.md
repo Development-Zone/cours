@@ -1,27 +1,29 @@
 # HTML
 
-HTML de Hyper text markup language est un langague de balisage ( **ce n'est pas pas language de programmation**) qui permet de structurer les donné d'une page web. 
+HTML de Hyper Text Markup Language est un langague de balisage (**ce n'est pas pas language de programmation**) qui permet de structurer les données d'une page web. 
 
-le HTML est le code envoyé au navigateur internert qui va ensuite lire le code pour rendre le contenu de la page. 
+Le HTML est le code envoyé au navigateur internet qui va ensuite le lire pour le traduire et le rendre visible a l'utilisateur.
 
-bien sur le HTML seul ne fournis pas de style, il sera complémenter avec du CSS pour la mise en forme du style. 
+Bien sûr le HTML seul ne fournis pas de style, il sera complémenté avec du CSS pour la mise en forme du style. 
 
-donc nous avons le : 
+Donc nous avons : 
 
-- HTML, pour la structure des donnée 
-- et le CSS pour la mise en forme du style. 
+- Le HTML, pour la structure des données.
+- Le CSS pour la mise en forme du style.
 
-le HTML contient des balise, qui ont chacun des roles défini. 2 types de balise, les balise paire, et les balise orphelines. 
+Le HTML contient des balises, qui ont chacun des rôles définis. Il y a deux types de balises, les balises paires, et les balises orphelines. 
 
 ```html
 <p>
-    ceci est un paragraphe
+    Ceci est un paragraphe dans une balise paire
 </p>
 ```
 
-dans cette exemple nous avons la balise qui elle contient une balise ouvrant et une balise fermant . 
+Dans cet exemple nous pouvons voir deux balises, une ouvrante ``<p>`` et une fermante ``</p>``.
 
-voici le strict minimun pour une page HTML : 
+Une balise orpheline ressemble a ceci : ``<br>``. Cette balise permet de sauter une ligne, car oui, il ne vous suffit pas juste de cliquer "Entrée" pour faire ceci.
+
+Voici le strict minimun pour une page HTML : 
 
 ```html
 <!DOCTYPE html>
@@ -35,45 +37,49 @@ voici le strict minimun pour une page HTML :
 </html>
 ```
 
-la premiere ligne `<!DOCUTPE html>` est le doctype, il indique au navigateur le type de documents et la version du language, l'occurence, c'est de HTML5. ht
-les balise `<html>` va contenir l'ensemble de la page html. dans cette balise, elle doit obligatoirement avoir 2 balise : 
+La premiere ligne `<!DOCYTPE html>` est le doctype, il indique au navigateur le type de documents et la version du language, en l'occurence HTML5.
+Les balises `<html>` vont contenir l'ensemble de la page html. dans cette balise, il doit obligatoirement y avoir 2 balises : 
 
-- `<head>` : cette balise contient les métadonné, information titre dans l'onglet, le logo dans l'onget, la description pour le référencement ( google ), divers message quand on partage le liens avec le protocole open graphe utilisé par discord, facebook ( vous avez pu remarquer que quand vous partager un lien, discord rajoute un bloc de text en bas )
+- `<head>` : Contient les métadonnées, information principale de votre page, titre, le logo, la description (pour le référencement sur google ou autre), les informations pour l'embed (bloc qui va afficher les informations de votre page) avec le protocole open graphe utilisé par discord ou facebook. 
 
-- `<body>` : cette balise va contenir l'ensemble de la page ( c'est ensemble de la page visible )
+![embed](https://imgur.com/ejZCUkG.png)
+
+- `<body>` : Contient l'ensemble de la page, donc tous ce qui sera visible sur la page.
 
 
-## les différente type de balise 
+## Les autres type de balise 
 
-il existe plusieurs type de balise: 
+Il existe plusieurs autres type de balises.
 
-### les balise de type block 
+### Les balises de type block 
 
-les de type block sont comme des boite qu'ont peut modifier la largeur, hauteur, position via le CSS. voici quelque balise de type block : 
+Les balises de type block sont comme des boites qu'ont peut modifier: Largeur, Hauteur, position, tout ça via le CSS.
 
-- div: la div est une balise générique de type block qui n'as pas de sens définir, a utiliser il on trouve pas de balise sémentique adapter a ce que on veut. 
-- nav: balise qui représente le menu de navigation , a utiliser pour indiquer qui a un menu de navigation a l'intérieur des 2 balise 
-- header: balise sémentatique qui indique le haut de la page, la partie qui contient le titre, le site 
-- footer: balise sémentique qui répresente le pied de page, 
-- article: balise à utiliser pour représenter un article le contenu entre les balise doivent etre un article ( comme un forum, ). 
-- serction: balise sémentique qui représente une section de la page. 
+- nav: balise qui représente le menu de navigation.
+- header: balise sémantique qui indique le haut de la page.
+- div: la div est une balise générique de type block qui n'as pas de sens défini. A utiliser si on ne trouve pas de balise sémantique adapté a ce que l'on cherche. 
+- article: balise à utiliser pour représenter un article, le contenu entre les balise doivent etre un article (comme un forum, ou un blog). 
+- section: balise sémantique qui représente une section de la page. 
+- footer: balise sémantique qui répresente le pied de page.
 
-d'autre balise de type block existe, mais les rémunrée tous serait trop long et on ne vas pas imiter le dico 
+### Les balises de type inline
 
-### les balise de type inline
+Les balise de type inline sont des balise qui vont mettre en valeur le text comme en **gras**, _italique_, __barré__ ou <u>souligné</u>. 
 
-les balise de type inline sont des balise qui vont mettre en valeur le text comme de emphasique. voici quelque balise de type inline : 
+- ``strong`` : balise qui sert a indiquer que le text est important, mise en valeur forte  la mise en gras doit se faire dans le CSS ou en utilisant la balise suivante. 
+- ``b`` : sert a indiquer que le texte doit être en gras mais n'aura aucune importance, c'est juste pour *attirer l'attention sur ce mot*
+- ``em`` ou ``i`` : indiquer le text pour le mettre en valeur 
+- ``mark`` : indiquer le text pour indiquer une certaine importance
+- ``u`` : indiquer le text pour indiquer une certaine importance
 
-- strong : balise qui sert a indiquer que le text est important, mise en valeur forte ( **attention, cette balise n'as pas de role de mettre en gras. meme si c'est le comportement par défaut des navigateur** ) la mise en gras doit se faire dans le CSS. 
-- em: mise en valeur normal
-- mark: mise en valeur visuel 
+**attention, cette c'est balise cité, ne sont pas des balise pour de la mise en forme. si vous voulez mettre en forme, c'est dans le CSS qui faut le faire**
 
-## Mémento balise HTML
+## Mémento balises HTML
 
-vous pouvez trouver le mémento de openclassroom des balise html [ici](https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1608357-memento-des-balises-html)
+Vous pouvez trouver le mémento de openclassroom des balises HTML [ici](https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1608357-memento-des-balises-html)
 
-## Ressource utilise
+## Ressources utilisées
 
-pour apprendre le HTML, vous pouvez suivre excelent cours de Mathieu Nebra, Cofondateur de Openclassroom 
+Pour apprendre le HTML, vous pouvez suivre cet excellent cours de Mathieu Nebra, Cofondateur de Openclassroom.
 
 [apprendre le HTML et CSS](https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3)
