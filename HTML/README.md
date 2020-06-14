@@ -23,6 +23,25 @@ Dans cet exemple nous pouvons voir deux balises, une ouvrante ``<p>`` et une fer
 
 Une balise orpheline ressemble a ceci : ``<br>``. Cette balise permet de sauter une ligne, car oui, il ne vous suffit pas juste de cliquer "Entrée" pour faire ceci.
 
+certaine balise peuvent comporter des attributs, prenont l'exemple de la balise ``<a>`` ( a comme anchor, ). cette balise doit avoir un attributs renseigné. 
+
+```html
+<a href="page1">Lien vers la page 1</a>
+```
+
+dans cette exemple, la balise a posede un attributs donc la key est **href** et la valeur est **page1**. certaine balise peuvent avoir des attributs a renseigner comme la balise ``<img>`` : 
+
+```html
+<img src="img/photo1.jpg" alt="photo" >
+```
+
+dans cettte balise image, elle contient 2 attributs : src et alt. src permet d'indiquer le chemin de la photo donc la le chemin est **img/photo1.jpg**. 
+alt est un attributs qui permet de donnée une descript sur image quand elle ne peut pas etre afficher ( navigateur pour aveugles, navagateur ne supportant pas le rendu graphique), cette attributs est aussi utilisé par le bot google pour le référencement web. ( les bot google est un grand aveugle ). 
+
+voici 2 attributs a connaitre qu'ont peut mettre sur n'importe quel balise : 
+**id** : id lui renseigne un identifiant unique sur la balise. 
+**class** : class lui renseigne une classe. les classe sont majoritairement utilisé dans le css pour regrouper les balise de la meme classe. ca permet distinguer un certain groupe de balise qui auront le meme style CSS. 
+
 Voici le strict minimun pour une page HTML : 
 
 ```html
