@@ -40,7 +40,9 @@ Voici le strict minimun pour une page HTML :
 La premiere ligne `<!DOCUTPE html>` est le doctype, il indique au navigateur le type de documents et la version du language, en l'occurence HTML5.
 Les balises `<html>` vont contenir l'ensemble de la page html. dans cette balise, il doit obligatoirement y avoir 2 balises : 
 
-- `<head>` : Contient les métadonnées, information principale de votre page, titre, le logo, la description (pour le référencement sur google ou autre), les informations pour l'embed (bloc qui va afficher les informations de votre page) avec le protocole open graphe utilisé par discord ou facebook. ![embed](https://imgur.com/ejZCUkG.png)
+- `<head>` : Contient les métadonnées, information principale de votre page, titre, le logo, la description (pour le référencement sur google ou autre), les informations pour l'embed (bloc qui va afficher les informations de votre page) avec le protocole open graphe utilisé par discord ou facebook. 
+
+![embed](https://imgur.com/ejZCUkG.png)
 
 - `<body>` : Contient l'ensemble de la page, donc tous ce qui sera visible sur la page.
 
