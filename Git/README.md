@@ -13,43 +13,48 @@ git facilite la vie des dévellopeur, car il facilite le travail en équipe et l
 
 ## Lexique, les mots à connaitre 
 
-**Commit** : un commit est une modification du code, un commit va contenir plusieurs information, le nom de celui qui a crée , la date du commit, les modification effectuer, le numéro de SHA ( numéro unique qui permet d'identifier le commit) 
+**Commit** : Un commit est une modification du code, un commit va contenir plusieurs informations :
+- Le nom de celui qui a crée
+- La date du commit 
+- Les modification effectuée
+- Le numéro de SHA ( numéro unique qui permet d'identifier le commit) 
 
-**Branches**: une branches est une version différents du code, par défaut quand on crée un projet, nous avons la branche **master** qui est la branche principale. je vois une branche comme une dimension parallèle, la branche est une version différent d'une réalité ou les commit sont des point temporel. 
-( j'espere mon explication avec dimension parallèle vous a aider a comprendre ) 
+**Branche**: Les branches permettent de travailler sur des versions de code qui divergent de la branche principale (souvent appelé **master**) contenant votre code courant. 
 ( _une branche n'est ni plus ni moins qu'un alias qui correspondra à un numéro de SHA_ )
 
-**SHA** : numéro unique qu'un commit contient, ce numéro est utile et permet d'etre sur que le commit n'as pas était modifié, vu a chaque nouveau commit un SHA est généré et ne peut pas avoir 2 SHA identique 
+**SHA** : Code unique d'un commit, ce numéro permet d'etre sûr que le commit n'as pas été modifié, un nouveau SHA est généré a chaque commit, il ne peut pas y avoir deux SHA identiques. 
 
-**depot distant** : depot comme Github, Framagit afin de stocker le code sur un serveur en commun. comme git est basé sur un distribuer, nous utilisons un depot commun afin de faciliter le partage. 
+**Dépôt distant** : Souvent appelé _repo_ ou _repository_, un dépôt est un endroit de stockage de votre code, en l'occurence **Git**, GitHub est aussi un dépôt distant et une interface graphique.
 
-**merge** : action de fusioner 2 branche , les modification d'une branche sont mis dans une autre branche. 
+**Merge** : Action de fusioner 2 branches, les modification de la branche éditée seront fusionnées a la branche voulue, souvent la branche principale.
 
 
-## les commande de git 
+## Les commandes
 
-### les principaux a connaitre 
+### A connaitre
 
-tous les commande sont a rentrer dans la CLI ( Command line interface , ce qui correspond au terminal ou invite de commande) 
+Toutes ces commandes sont a entrer dans la CLI. (Command line interface, ce qui correspond au terminal ou invite de commande) 
 
-**git init** : initialise un projet git, cela crée le dossier .git dans le dossier, ce dossier contiendra tous les commit, branche, c'est un dossier qu'ont ne manipule pas directement 
+**git init** : Initialise un projet git, cela crée un dossier .git dans le dossier de base de votre projet, ce dossier contiendra tous les commit, branches, etc... Il ne faut pas toucher a ce dossier a la main au risque de perdre vos données.
 
-**git clone _adresse_** : crée une copie d'un projet existant. 
+**git clone \<lien du repo\>** : Créé une copie d'un dépôt existant. 
 
-**git add _file1_** : ajoute un fichier dans l'index avant qui soit commité, l'index et les modification qui seront dans le commit lors de la création du commit 
+**git add _file1_** : Ajoute un fichier dans l'index* avant qui soit commité, l'index* et les modifications qui seront dans le commit lors de sa création.
 
-**git commit** : crée un commit, cette action va enregistrer les modification qui sont stocker dans l'index, ajouté précédemant avec la commande _git add_ cette commande va ouvrir un editeur de text dans le terminal, le commit sera effectif avec après renseigner le nom du commit et sauvegarde le fichier dans l'éditeur 
+> Index: considérez ceci comme une boite contenant le commit et ses modifications
 
-**git checkout _SHA or branch_** : cette commande permet de se placer sur un commit ou autre branch en spéciant le numéro du SHA ou le nom de la branche 
+**git commit -m "Message du commit"** : Crée un commit, cette action va enregistrer les modifications qui sont stockées dans l'index, ajoutés précédemant avec la commande _git add_. 
 
-**git branch _name_** : permet de crée une nouvelle branche, dans mon exemple avec le voyage dans le temps c'est comme si on crée une nouvelle dimension parallèle. _name_ est a remplacer par le nom de la branche qu'on veut. 
+**git checkout \<SHA or branch\>** : Permet de se placer sur un commit en spéciant le numéro du SHA ou sur une branche via son nom. 
 
-### pour travailer en équipe : 
+**git branch \<nom\>** : Crée une nouvelle branche. Pour voir la liste des branches existantes, ne spécifiez pas de nom.
 
-**git push _remote_ _branch_** : action qui permet d'envoyer le code d'une branche sur une repo. (en général github, framagit, gitlab ). **remote** est l'adresse du depot ou son alias ( souvent elle s'appele **origin**)
+### Pour travailer en équipe
 
-**git pull** : cette action va récuper le code est faire un merge sur le repo local, cette commande est l'équivalent de **git fetch** suivi de **git merge**. 
+**git push \<remote\> \<branch\>** : Permet d'envoyer le code d'une branche sur un repo. (en général github, framagit, gitlab). **remote** est l'adresse du dépôt ou son alias (souvent elle s'appele **origin**), **branch** est la branche sur laquelle vous voulez envoyer votre code.
 
-**git fetch** : action qui consiste a récuperer le code sur un depot distant sans appliquer les modification sur le repo local 
+**git fetch** : Permet de récuperer le code sur un dépôt distant sans appliquer les modification sur le repo local.
+
+**git pull** : Permet de récuperer le code et faire un merge sur le repo local, cette commande est l'équivalent de **git fetch** suivi de **git merge**. 
 
 
