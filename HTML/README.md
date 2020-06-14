@@ -83,10 +83,10 @@ Les balises de type block sont comme des boites qu'ont peut modifier: Largeur, H
 
 ### Les balises de type inline
 
-Les balise de type inline sont des balise qui vont mettre en valeur le text comme en **gras**, _italique_, __barré__ ou <u>souligné</u>. 
+Les balise de type inline sont des balise qui vont agir sur le text.
 
 - ``strong`` : balise qui sert a indiquer que le text est important, mise en valeur forte  la mise en gras doit se faire dans le CSS ou en utilisant la balise suivante. 
-- ``b`` : sert a indiquer que le texte doit être en gras mais n'aura aucune importance, c'est juste pour *attirer l'attention sur ce mot*
+- ``b`` : sert a attirer l'attention sur le contenu n'aura aucune importance, c'est juste pour *attirer l'attention sur ce mot*
 - ``em`` ou ``i`` : indiquer le text pour le mettre en valeur 
 - ``mark`` : indiquer le text pour indiquer une certaine importance
 - ``u`` : indiquer le text pour indiquer une certaine importance
