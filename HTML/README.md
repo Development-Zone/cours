@@ -66,10 +66,11 @@ Les balises de type block sont comme des boites qu'ont peut modifier: Largeur, H
 
 Les balise de type inline sont des balise qui vont mettre en valeur le text comme en **gras**, _italique_, __barré__ ou <u>souligné</u>. 
 
-- strong : balise qui sert a indiquer que le text est important, mise en valeur forte (**attention, cette balise n'as pas le role de mettre en gras. meme si c'est le comportement par défaut des navigateur**) la mise en gras doit se faire dans le CSS ou en utilisant la balise suivante. 
-- b : sert a indiquer que le texte doit être en gras mais n'aura aucune importance, c'est juste pour *attirer l'attention sur ce mot*
-- em : mettre le texte en italique
-- mark : surligner le texte, par défaut, il sera surligné en jaune, libre a vous de changer ceci dans le CSS.
+- ``strong`` : balise qui sert a indiquer que le text est important, mise en valeur forte (**attention, cette balise n'as pas le role de mettre en gras. meme si c'est le comportement par défaut des navigateur**) la mise en gras doit se faire dans le CSS ou en utilisant la balise suivante. 
+- ``b`` : sert a indiquer que le texte doit être en gras mais n'aura aucune importance, c'est juste pour *attirer l'attention sur ce mot*
+- ``em`` ou ``i`` : mettre le texte en italique
+- ``mark`` : surligner le texte, par défaut, il sera surligné en jaune, libre a vous de changer ceci dans le CSS.
+- ``u`` : souligner le texte
 
 ## Mémento balises HTML
 
