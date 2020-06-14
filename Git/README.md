@@ -39,7 +39,7 @@ Toutes ces commandes sont a entrer dans la CLI. (Command line interface, ce qui 
 
 **git clone \<lien du repo\>** : Créé une copie d'un dépôt existant. 
 
-**git add _file1_** : Ajoute un fichier dans l'index* avant qui soit commité, l'index* et les modifications qui seront dans le commit lors de sa création.
+**git add \<fichier\>** : Ajoute un fichier dans l'index* avant qu'il soit commité, l'index* et les modifications qui seront dans le commit lors de sa création. Remplacez \<fichier\> par "." pour ajouter tout vos fichiers.
 
 > Index: considérez ceci comme une boite contenant le commit et ses modifications
 
@@ -57,4 +57,36 @@ Toutes ces commandes sont a entrer dans la CLI. (Command line interface, ce qui 
 
 **git pull** : Permet de récuperer le code et faire un merge sur le repo local, cette commande est l'équivalent de **git fetch** suivi de **git merge**. 
 
+
+## Le fichier gitignore
+
+Ce fichier permet de dire a git quels fichiers/dossiers il va ignorer.
+
+Tous les fichiers/dossiers contenu dans ce fichier ne seront ni commité ni versionné. 
+
+Généralement on ignore les fichiers de configuration de notre projet car ils contiennent des informations privées.
+
+### Creation et configuration
+
+Créez un nouveau fichier dans le dossier de base de votre projet et nommez le ``.gitignore``.
+
+Ensuite il vous suffit juste d'entrer le chemin d'accès du/des fichier(s) a ignorer.
+
+Exemple :
+
+Admettons que vos fichiers son organisé comme ceci
+
+![gitignore](https://imgur.com/XeCS7ea.png)
+
+Vous voulez ignorer le ficher apiKeys.js et le dossier build/
+
+Ce que devra contenir votre ``.gitignore``.
+
+```
+apiKeys.js
+
+build/
+```
+
+Voila, c'est aussi simple que ça. 
 
