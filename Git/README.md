@@ -1,104 +1,103 @@
 # Git
 
-git est un systeme de versionning, qui permet de garder une trace de tous les modification et version d'un code. 
-cela permet de garder une trace de tous les modications de code qu'ont appele **commit**. 
+Git est un système de versionning, qui permet de garder une trace de tous les modifications et versions d'un code. 
+Ces modifications sont appelées **commit**. 
 
-il existe plusieurs système de Versionning comme ( ajouter les noms des concurence ). 
+Il existe plusieurs autres systèmes de versionning comme GitHub, SVN (Subversion), Bitbucket, Perforce, ou Mercurial. 
 
-git est un système distruber, chaque personne peut avoir ça propre copie et envoyé a une autre personne. 
+Git est un système distribué, chaque personne peut avoir sa propre copie et la partager à une autre personne. 
 
-donc avec git on peut revenir dans le code à un moment donné, revenir en arrière tester et faire des versions différent. savoir qui a fais la modification. 
+Git permet donc de parcourir l'historique des version d'un projet, de revenir en arrière, tester et faire des versions différentes, et même de connaître l'auteur de ces modifications. 
 
-git facilite la vie des dévellopeur, car il facilite le travail en équipe et le partage de code, la fusion de code ( merge ). 
+Il facilite la vie des développeurs car il facilite le travail en équipe et le partage de code ainsi que la fusion de code (appelée **merge**). 
 
 ## Lexique, les mots à connaitre 
 
-**Commit** : Un commit est une modification du code, un commit va contenir plusieurs informations :
-- Le nom de celui qui a crée
-- La date du commit 
-- Les modification effectuée
+**Commit** : Un commit est une modification du code, il contient plusieurs informations :
+- Le nom de l'auteur du commit
+- La date de création du commit 
+- Les modifications effectuées
 - Le numéro de SHA ( numéro unique qui permet d'identifier le commit) 
 
-**Branche**: Les branches permettent de travailler sur des versions de code qui divergent de la branche principale (souvent appelé **master**) contenant votre code courant. 
-( _une branche n'est ni plus ni moins qu'un alias qui correspondra à un numéro de SHA_ )
+**Branche**: Les branches permettent de travailler sur des versions de code qui divergent de la branche principale (souvent appelée branche **master**). On trouve en général une branche master et une branche dev, qui sert à tester de nouvelles fonctionnalités sans affecter le programme principal.
+(_une branche n'est ni plus ni moins qu'un alias qui correspondra à un numéro de SHA_)
 
-**SHA** : Code unique d'un commit, ce numéro permet d'etre sûr que le commit n'as pas été modifié, un nouveau SHA est généré a chaque commit, il ne peut pas y avoir deux SHA identiques. 
+**SHA** : Code unique d'un commit, il permet d'être sûr qu'il n'a pas été modifié. Un nouveau SHA est généré à chaque commit. Il ne peut pas y avoir deux SHA identiques. 
 
-**Dépôt distant** : Souvent appelé _repo_ ou _repository_, un dépôt est un endroit de stockage de votre code, en l'occurence **Git**, GitHub est aussi un dépôt distant et une interface graphique.
+**Dépôt distant** : Souvent appelé _repo_ ou _repository_, un dépôt est un endroit de stockage de votre code, en l'occurence **Git**. GitHub est aussi un dépôt distant et une interface graphique très utilisée.
 
-**Merge** : Action de fusioner 2 branches, les modification de la branche éditée seront fusionnées a la branche voulue, souvent la branche principale.
+**Merge** : Action de fusionner 2 branches, les modifications de la branche éditée seront fusionnées à la branche voulue, souvent la branche principale.
 
 
 ## Les commandes
 
-### A connaitre
+### À connaitre
 
-Toutes ces commandes sont a entrer dans la CLI. (Command line interface, ce qui correspond au terminal ou invite de commande) 
+Toutes ces commandes sont à entrer dans la CLI. (Command line interface, ce qui correspond au terminal ou invite de commande) 
 
-**git init** : Initialise un projet git, cela crée un dossier .git dans le dossier de base de votre projet, ce dossier contiendra tous les commit, branches, etc... Il ne faut pas toucher a ce dossier a la main au risque de perdre vos données.
+**git init** : Initialise un projet git, cela crée un dossier .git dans le dossier de base de votre projet, ce dossier contiendra tous les commit, branches, etc... Il ne faut pas éditer ce dossier au risque de perdre vos données.
 
-**git clone \<lien du repo\>** : Créé une copie d'un dépôt existant. 
+**git clone \<lien du repo\>** : Permet de créer une copie d'un dépôt existant. 
 
-**git add \<fichier\>** : Ajoute un fichier dans l'index* avant qu'il soit commité, l'index* et les modifications qui seront dans le commit lors de sa création. Remplacez \<fichier\> par "." pour ajouter tout vos fichiers.
+**git add \<fichier\>** : Ajoute un fichier dans l'index* avant qu'il soit commité. Remplacez \<fichier\> par "." pour ajouter tout vos fichiers.
 
 > Index: considérez ceci comme une boite contenant le commit et ses modifications
 
-**git commit**: Crée un commit, cette action va enregistrer les modifications qui sont stockées dans l'index, ajoutés précédemant avec la commande _git add_. 
-cette commande va ouvrir un editeur de text dans le terminal, le commit sera pris en compte après avoir renseigner le nom du commit et l'avoir sauvegarder.
+**git commit**: Crée un commit, cette action va enregistrer les modifications qui sont stockées dans l'index, ajoutés précédemment avec la commande _git add_.
+Cette commande va ouvrir un éditeur de texte dans le terminal, le commit sera pris en compte après avoir renseigné le nom du commit et l'avoir sauvegardé.
 
-**git checkout \<SHA or branch\>** : Permet de se placer sur un commit en spéciant le numéro du SHA ou sur une branche via son nom. 
+**git checkout \<SHA or branch\>** : Permet de se placer dans un commit en spécifant le numéro du SHA ou dans une branche via son nom. 
 
-**git merge _\<branch1\>_ _[\<branch2\>]_** : permet de fusioner les commit de la branch1 dans la branch2, si la branch2 n'est pas renseigné, c'est la branche actuel qui sera pris en tant que branche 2. ( le parametre _branch2_ est facultatif ). si au niveau des 2 branche, il a eu des modification au meme endroit, lors de la merge, cela causera des conflits. git vous propsera quel version choisir et vous demandera de résoudre les conflits manuellement avant le merge. 
+**git merge _\<branche1\>_ _[\<branche2\>]_** : Permet de fusionner les commits de la branche1 dans la branche2, si la branche2 n'est pas renseignée, c'est la branche actuelle qui sera pris en tant que branche 2. (le paramètre _branche2_ est facultatif). Si il y a eu des modifications au même endroit dans les deux branches, cela peut causer des conflits lors du merge. Git vous proposera alors quelle version choisir et vous demandera de résoudre les conflits manuellement avant le merge. 
 
 ###  pour obtenir des information 
 
-**git status** : donne des information sur l'état du repo , elle donne l'état de l'index, le nombre de la branche actuel ou du commit ( SHA ) actuel et d'autre information. ( c'est une commande que j'utilise souvent ) 
+**git status** : Permet d'obtenir des information sur l'état du repo. On peut obtenir l'état de l'index, le numéro de la branche actuel ou du commit (SHA) actuel et d'autre information (c'est une commande beaucoup utilisée).
 
-**git log** : affiche la liste des commit de la branche actuel 
+**git log** : Affiche la liste des commits de la branche actuelle.
 
-**git show _[\<SHA\>]_** : affiche le détail de commit, le numéro de SHA est facultatif, si il n'est pas renséigné, c'est le dernier commit qui sera pris.
+**git show _[\<SHA\>]_** : Permet d'afficher des informations détaillées sur un commit. Le numéro de SHA est facultatif : si il n'est pas renseigné, c'est le dernier commit qui sera pris.
 
-**git diff _[\<SHA1\>]_ _[\<SHA2>]_** : cette commande affiche les différence de code entre 2 commits, si rien n'est renséigné dans les SHA, il donnera la différence entre l'état du travail actuel et du dernier commit. si il y a que le SHA1 de renseigner, on aura la différence de l'état de travail avec le commit renseingé SHA1. 
+**git diff _[\<SHA1\>]_ _[\<SHA2>]_** : Cette commande affiche les différences de code entre 2 commits, si rien n'est renseigné dans les SHA, la différence entre l'état du travail actuel et du dernier commit sera affichée. Si il n'y a que le SHA1 de renseigner, c'est la différence entre l'état de travail et le commit renseigné SHA1 qui sera affichée. 
 
-**git blame _\<file\>_** : affiche le code d'un fichier en indiquant qui a éditer les lignes, cette commande est utilise si on veut retrouver le coupable d'un bug et de le blamer. ( cette commande est utile que si on travaill à plusieurs)
-
-
-
-### pour travailer en équipe : 
-**git branch \<nom\>** : Crée une nouvelle branche. Pour voir la liste des branches existantes, ne spécifiez pas de nom.
-
-### Pour travailer en équipe
-
-**git push \<remote\> \<branch\>** : Permet d'envoyer le code d'une branche sur un repo. (en général github, framagit, gitlab). **remote** est l'adresse du dépôt ou son alias (souvent elle s'appele **origin**), **branch** est la branche sur laquelle vous voulez envoyer votre code.
-
-**git fetch** : Permet de récuperer le code sur un dépôt distant sans appliquer les modification sur le repo local.
-
-**git pull** : Permet de récuperer le code et faire un merge sur le repo local, cette commande est l'équivalent de **git fetch** suivi de **git merge**. 
+**git blame _\<file\>_** : Affiche le code d'un fichier en indiquant qui a édité les lignes, cette commande est utilisée pour retrouver l'auteur d'une modification en cas de bugs par exemple (cette commande n'est utile que si on travaille à plusieurs).
 
 
-## Le fichier gitignore
 
-Ce fichier permet de dire a git quels fichiers/dossiers il va ignorer.
 
-Tous les fichiers/dossiers contenu dans ce fichier ne seront ni commité ni versionné. 
+### Pour travailler en équipe : 
+**git branch \<nom\>** : Crée une nouvelle branche. Si aucun nom n'est spécifié, c'est la liste totale des branches qui sera affichée.
+
+**git push \<remote\> \<branch\>** : Permet d'envoyer le code d'une branche sur un repo (en général Github, Framagit ou Gitlab). **remote** est l'adresse du dépôt ou son alias (souvent elle s'appelle **origin**), et **branch** est la branche sur laquelle le code va être transféré.
+
+**git fetch** : Permet de récupérer le code sur un dépôt distant sans appliquer les modifications sur le repo local.
+
+**git pull** : Permet de récupérer le code et d'en faire un merge sur le repo local. Cette commande est l'équivalent de **git fetch** suivi de **git merge**.
+
+
+## Le fichier .gitignore
+
+Ce fichier permet d'indiquer à git quels fichiers/dossiers il devra ignorer lors de transferts.
+
+Tous les fichiers/dossiers contenu dans ce fichier ne seront ni commités ni versionnés.
 
 Généralement on ignore les fichiers de configuration de notre projet car ils contiennent des informations privées.
 
-### Creation et configuration
+### Création et configuration
 
 Créez un nouveau fichier dans le dossier de base de votre projet et nommez le ``.gitignore``.
 
-Ensuite il vous suffit juste d'entrer le chemin d'accès du/des fichier(s) a ignorer.
+Ensuite il vous suffit simplement d'entrer le(s) chemin d'accès du/des fichier(s) à ignorer.
 
 Exemple :
 
-Admettons que vos fichiers son organisé comme ceci
+Admettons que vos fichiers sont organisés comme ceci :
 
 ![gitignore](https://imgur.com/XeCS7ea.png)
 
-Vous voulez ignorer le ficher apiKeys.js et le dossier build/
+Vous voulez ignorer le ficher apiKeys.js ainsi le dossier build/
 
-Ce que devra contenir votre ``.gitignore``.
+Votre fichier ``.gitignore`` devra alors contenir :
 
 ```
 apiKeys.js
@@ -106,5 +105,7 @@ apiKeys.js
 build/
 ```
 
-Voila, c'est aussi simple que ça. 
+## Conclusion
 
+Ce court texte d'introduction à l'utilisation de Git vous a donc appris les définitions des principaux mots clés utilisés dans le versionning, les principales commandes propres à git ainsi que quelques précisions qui vous seront utiles.
+Pour passer au cours suivant, [cliquez ici](INSÉRER COURS 2 ICI).
