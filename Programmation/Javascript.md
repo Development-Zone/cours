@@ -132,3 +132,84 @@ let student = {
 on peut acceder au attributs ( or key ) de la variable student via la notation pointé, 
 
 
+### Les Fonctions
+
+Les fonctions permet de réutiliser un bloc d'instruction. afin de simplier le code. Pour du code qui est utilisé souvent. 
+une fonction peut recevoir des arguments en parametre, et peut retourner une valeur de retour à la fin de la fonction. 
+
+une fonction se déclare avec le clé **function**.
+
+dans cette exemple, je vais crée une fonction qui calcul le taux d'alcoolémique d'un individu, voici la déclaration de fonction : 
+
+```js
+function tauxAlcool(cl, weight, isMan, percentAlcool)
+{
+    let coeffIndividu = isMan ? 0.7 : 0.6 ; 
+    let tauxAlcool = (cl * ( percentAlcool / 100 ) * 0.8) - ( coeffIndividu * weight ) ;
+    return tauxAlcool;
+}
+```
+dans l'exemple nous avons déclarer une fonctions qui prend 4 argument : 
+- **cl** : la quantité d'alcool que l'individu a bu
+- **weight** : le poids de l'individu exprimer en kilo. 
+- **isMan** : un boolean a renseigner pour indiquer le sex de l'individu, **true** pour une homme, **false** pour une femme.
+- **percentAlcool** : pourcentage du taux ( indiquer sur la bouteille d'alcool ) . ( 13% pour une bouteille de champagne engénéral ) 
+
+cette fonction retourne une valeur qui est le taux d'alcoolémique( grace au mot clé **return** ). 
+
+ce morceau de code ne sert a rien tant que la fonctionn n'est pas appeler. 
+
+voici comment on execute une fonction : 
+```js
+let tauxRobert = tauxAlcool(30, 70, true, 13)
+```
+
+dans cette exemple, robert à bu 30 cl de boisson alcoolisé, il pese 70 kilo, et bien sur c'est une homme( d'ou la raison du **true**). 
+il a bu une boisson avec une boison alcoolisé à 13% ( Champagne ) 
+
+cette fonction peuvent etre appeler autant de fois que néccessaire. 
+
+
+### Les structure de control
+
+Dans un programme, les structure de control est primodial, c'est qui donne la logique du programme. et permet au programme de prendre des décisions. 
+
+
+#### Les conditions
+
+Les conditions permet de choisir un bloc de code en fonction d'une condition. 
+
+
+##### la structure if
+
+voici une condition avec un simple **if** : 
+```js
+let ageArthur = 30; 
+
+if ( ageArtur >= 18 ) 
+{
+    console.log("Arthur est majeur"); 
+}
+```
+
+comme la condition est vrai, le message **Arthur est majeur** sera afficher dans la console. 
+
+##### la structue else-if 
+
+voici une condition avec un **else-if** : 
+```js
+let ageArthur = 15; 
+
+if ( ageArthur >=18 )
+{
+    console.log("Arthur est majeur" ); 
+} 
+else
+{
+    console.log("Arthur est mineur" ) ; 
+}
+```
+
+comme  la condition dans le if ne passse passe pas, le message affiché sera : **Arthur est mineur** . 
+
+
