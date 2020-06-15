@@ -23,6 +23,25 @@ Dans cet exemple nous pouvons voir deux balises, une ouvrante ``<p>`` et une fer
 
 Une balise orpheline ressemble a ceci : ``<br>``. Cette balise permet de sauter une ligne, car oui, il ne vous suffit pas juste de cliquer "Entrée" pour faire ceci.
 
+certaine balise peuvent comporter des attributs, prenont l'exemple de la balise ``<a>`` ( a comme anchor, ). cette balise doit avoir un attributs renseigné. 
+
+```html
+<a href="page1">Lien vers la page 1</a>
+```
+
+dans cette exemple, la balise a posede un attributs donc la key est **href** et la valeur est **page1**. certaine balise peuvent avoir des attributs a renseigner comme la balise ``<img>`` : 
+
+```html
+<img src="img/photo1.jpg" alt="photo" >
+```
+
+dans cettte balise image, elle contient 2 attributs : src et alt. src permet d'indiquer le chemin de la photo donc la le chemin est **img/photo1.jpg**. 
+alt est un attributs qui permet de donnée une descript sur image quand elle ne peut pas etre afficher ( navigateur pour aveugles, navagateur ne supportant pas le rendu graphique), cette attributs est aussi utilisé par le bot google pour le référencement web. ( les bot google est un grand aveugle ). 
+
+voici 2 attributs a connaitre qu'ont peut mettre sur n'importe quel balise : 
+**id** : id lui renseigne un identifiant unique sur la balise. 
+**class** : class lui renseigne une classe. les classe sont majoritairement utilisé dans le css pour regrouper les balise de la meme classe. ca permet distinguer un certain groupe de balise qui auront le meme style CSS. 
+
 Voici le strict minimun pour une page HTML : 
 
 ```html
@@ -64,13 +83,15 @@ Les balises de type block sont comme des boites qu'ont peut modifier: Largeur, H
 
 ### Les balises de type inline
 
-Les balise de type inline sont des balise qui vont mettre en valeur le text comme en **gras**, _italique_, __barré__ ou <u>souligné</u>. 
+Les balise de type inline sont des balise qui vont agir sur le text.
 
-- ``strong`` : balise qui sert a indiquer que le text est important, mise en valeur forte (**attention, cette balise n'as pas le role de mettre en gras. meme si c'est le comportement par défaut des navigateur**) la mise en gras doit se faire dans le CSS ou en utilisant la balise suivante. 
-- ``b`` : sert a indiquer que le texte doit être en gras mais n'aura aucune importance, c'est juste pour *attirer l'attention sur ce mot*
-- ``em`` ou ``i`` : mettre le texte en italique
-- ``mark`` : surligner le texte, par défaut, il sera surligné en jaune, libre a vous de changer ceci dans le CSS.
-- ``u`` : souligner le texte
+- ``strong`` : balise qui sert a indiquer que le text est important, mise en valeur forte  la mise en gras doit se faire dans le CSS ou en utilisant la balise suivante. 
+- ``b`` : sert a attirer l'attention sur le contenu n'aura aucune importance, c'est juste pour *attirer l'attention sur ce mot*
+- ``em`` ou ``i`` : indiquer le text pour le mettre en valeur 
+- ``mark`` : indiquer le text pour indiquer une certaine importance
+- ``u`` : indiquer le text pour indiquer une certaine importance
+
+**attention, cette c'est balise cité, ne sont pas des balise pour de la mise en forme. si vous voulez mettre en forme, c'est dans le CSS qui faut le faire**
 
 ## Mémento balises HTML
 
